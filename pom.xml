@@ -25,13 +25,12 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-				</configuration>
 			</plugin>
 	<!--i add the next plugin for cloud deployement configuration-->		
 		      <plugin>
         <groupId>org.mule.tools.maven</groupId>
         <artifactId>mule-maven-plugin</artifactId>
+        <version>${mule.maven.plugin.version}</version>
         <configuration>
           <deploymentType>cloudhub</deploymentType>
           <muleVersion>${mule.version}</muleVersion> 
