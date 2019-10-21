@@ -28,6 +28,35 @@
 				<configuration>
 				</configuration>
 			</plugin>
+	<!--i add the next plugin for cloud deployement configuration-->		
+		      <plugin>
+        <groupId>org.mule.tools.maven</groupId>
+        <artifactId>mule-maven-plugin</artifactId>
+        <configuration>
+          <deploymentType>cloudhub</deploymentType>
+          <muleVersion>${mule.version}</muleVersion> 
+          <username>jara</username> 
+          <password>Appf@111213</password> 
+          <applicationName>cicd-testing</applicationName>
+          <environment>Sandbox</environment> 
+          <businessGroup>${anypoint.businessGroup}</businessGroup>
+          <!--<region>${cloudhub.region}</region>-->
+          <uri>https://anypoint.mulesoft.com</uri> 
+          <workerType>Micro</workerType>
+          <workers>1</workers>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>	
+			
+			
 		</plugins>
 	</build>
 
