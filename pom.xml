@@ -33,7 +33,7 @@
           <password>Appf@111213</password> 
           <applicationName>cicd-testing</applicationName>
           <environment>Sandbox</environment> 
-          <businessGroup>${anypoint.businessGroup}</businessGroup>
+         <!-- <businessGroup>${anypoint.businessGroup}</businessGroup> -->
           <!--<region>${cloudhub.region}</region>-->
           <uri>https://anypoint.mulesoft.com</uri> 
           <workerType>Micro</workerType>
@@ -49,7 +49,7 @@
           </execution>
         </executions>
       </plugin>	
-			
+<!-- above plugin is add -->		
 			
 		</plugins>
 	</build>
